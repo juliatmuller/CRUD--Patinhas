@@ -16,9 +16,7 @@ include "../infra/conexao.php";
 </head>
 
 <body>
-    <header>
-        <h1> CRUD - Clientes </h1>
-    </header>
+ 
 
 <main>
     <?php if (isset($_GET["sucesso"])) { ?>
@@ -31,11 +29,12 @@ include "../infra/conexao.php";
 
 <?php } else { ?>
 
-<h2> Cadastrar Cliente</h2>
+<h1> ~ Cadastrar Cliente ~
+</h1>
 
     <form action="cadastrar.php" method="POST">
 
-        <input type="hidden" name="tipo" value="usuario">
+        <input type="hidden" name="tipo" value="clientes">
 
         <label for="nome">Nome:</label>
     <input type="text"  name="nome" id="nome" required >
@@ -43,7 +42,7 @@ include "../infra/conexao.php";
     <br>
 
        <label for="email">Email:</label>
-    <input type="text"  name="Email" id="Email" required >
+    <input type="text"  name="email" id="email" required >
     <br>
     <br>
 
@@ -56,11 +55,17 @@ include "../infra/conexao.php";
      <label for="endereco">Endereço:</label>
     <input type="text"  name="endereco" id="endereco" required >
     <br>
+  <br>
+    
+
+
+
+    <button type="submit">Cadastrar</button>
 
       </form>
 
     <br>
-    <br>
+  
 
 
     <a href="../index.php">  <button type="button"> Voltar para o início</button> </a>
